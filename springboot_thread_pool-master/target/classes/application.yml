@@ -1,0 +1,37 @@
+server:
+  port: 8090
+  #ssl:
+    #key-store-type: PKCS12
+    #key-store: file:/etc/letsencrypt/live/huajiajizhang.top/key.p12
+    #key-store-password: dabu123.abc
+    #enabled: true
+
+
+spring:
+  datasource:
+    #username: "telegramjz"
+    #password: "RE7HN5AAHnmcW5K8"
+    username: "root"
+    password: "admin"
+    url: "jdbc:mysql://127.0.0.1:3306/yadianna?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC"
+    driver-class-name: "com.mysql.cj.jdbc.Driver"
+
+  thymeleaf:
+    cache: false # 开发时关闭缓存,不然没法看到实时页面
+    #模板的模式，支持 HTML, XML TEXT JAVASCRIPT
+    mode: HTML5 # 用非严格的 HTML
+    #编码 可不用配置
+    encoding: UTF-8
+    #内容类别,可不用配置
+    servlet:
+      content-type: text/html
+
+
+
+
+#showSql
+logging:
+  level:
+    com:
+      example:
+        mapper : debug
